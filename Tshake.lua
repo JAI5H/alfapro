@@ -13,8 +13,7 @@ bot_id  = token:match("(%d+)")
 Id_Sudo = Sudo
 List_Sudos = {Id_Sudo,633004612,1753144681}
 print([[
-
-   #  _____  ________      ______  _____  
+#  _____  ________      ______  _____  
 #  |  __ \|  ____\ \    / / __ \|  __ \ 
 #  | |__) | |__   \ \  / / |  | | |__) |
 #  |  _  /|  __|   \ \/ /| |  | |  _  / 
@@ -6665,8 +6664,8 @@ if text == ("تحديث السورس") and DevTshake(msg) then
 send(msg.chat_id_,msg.id_,'☑┇تم التحديث')
 os.execute('rm -rf Tshake.lua')
 os.execute('rm -rf start.lua')
-download_to_file('https://raw.githubusercontent.com/amrjava/Alfa/master/Tshake.lua', 'Tshake.lua') 
-download_to_file('https://raw.githubusercontent.com/amrjava/Alfa/master/start.lua', 'start.lua') 
+download_to_file('https://raw.githubusercontent.com/amrjava/alfapro/main/Tshake.lua', 'Tshake.lua') 
+download_to_file('https://raw.githubusercontent.com/amrjava/alfapro/main/start.lua', 'start.lua') 
 dofile('Tshake.lua')  
 return false
 end
@@ -6934,19 +6933,24 @@ if text == "تحديث" and DevTshake(msg) then
 dofile("Tshake.lua")  
 send(msg.chat_id_, msg.id_, "☑┇تم التحديث")
 end
-if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then 
-local Text = [[ 
-Source Fast
-[DEV MAHMOUD](t.me/MahmoudM2)
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'قناه السورس ↗️',url="t.me/otlop12"}}, 
-{{text = 'مالك السورس ↗️', url="t.me/MahmoudM2"}}, 
-{{text = 'مطور السورس ↗️', url="t.me/Your_Nightmare0"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then
+Text = [[
+🐲┇ Welcome to Source
+🚩┇[ Tm   -  ”X”](t.me/TshakeX)
+ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
+🐉┇[Tshake'X' TEAM](t.me/TshakeX)
+
+📂┇[Source Files](t.me/TshakeX_files)
+
+💠┇[instaBoT](t.me/KKWBOT)
+
+📥┇[YouTube downloader](t.me/bhhBOT)
+
+🔰┇[CHANNEL Tumblr](t.me/DDDDID)
+ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ 
+[📮┇ConnectDeV](t.me/tshakebbot)
+]]
+send(msg.chat_id_, msg.id_,Text)
 end
 if text == 'حذف' or text == 'رابط الحذف' or text == 'بوت الحذف' then
 Text = [[
@@ -8111,8 +8115,8 @@ if text == "تحديث السورس 📥" then
 send(msg.chat_id_,msg.id_,'☑┇تم التحديث')
 os.execute('rm -rf Tshake.lua')
 os.execute('rm -rf start.lua')
-download_to_file('https://raw.githubusercontent.com/amrjava/Alfa/master/Tshake.lua', 'Tshake.lua') 
-download_to_file('https://raw.githubusercontent.com/amrjava/Alfa/master/start.lua', 'start.lua') 
+download_to_file('https://raw.githubusercontent.com/amrjava/alfapro/main/Tshake.lua', 'Tshake.lua') 
+download_to_file('https://raw.githubusercontent.com/amrjava/alfapro/main/start.lua', 'start.lua') 
 dofile('Tshake.lua')  
 return false
 end
